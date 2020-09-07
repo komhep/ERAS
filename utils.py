@@ -40,6 +40,9 @@ def check_new_log_content(new_log_entry, SettingsObject):
     # convert new log entry to a list
     for i in new_log_entry:
         new_log_entry_list = i.split(' ')
+        
+        # clear items
+        new_log_entry_list = [i.strip('*') for i in new_log_entry_list]
 
         # check if the near systems in the new log
         if not any((y in new_log_entry_list for y in consts.EXCEPTION_WORDS)):
