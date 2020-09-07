@@ -1,0 +1,4 @@
+{
+    "path_to_eve_logs": "Path_to_the_intel_chat_log_on_your_pc/South East Channel_*.txt",
+    "alarm_volume": "0.2"
+}
