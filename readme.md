@@ -36,5 +36,12 @@ The example below shows 2 systems that re situated in 4 jumps from the system I 
 },
 ```
 
+### Running the tool
+1. Activate virtual environment
+`source env/bin/activate`
+1. Run
+`python main.py`
+
+
 ### Participation and support
 Want to participate or send some ISKs? Feel free to contact `t beta` character in game.
