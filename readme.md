@@ -5,12 +5,13 @@ EVE online Region Alarm System
 
 #### Dependencies
 - Python 3
-- virtualenv
+- virtualenv (for Windows read this: https://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/)
 - pip
 
 ### Installation
 1. Download this repository to your PC (eg. `git clone...`)
-1. Create virtual environment
+1. Navigate to the folder where you've downloaded the script
+1. Create virtual environment in that folder using command
 `virtualenv env`
 1. Activate virtual environment
 `source env/bin/activate`
