@@ -50,11 +50,10 @@ def check_new_log_content(new_log_entry, SettingsObject):
                 for k, v in i.items():
                     for x in v:
                         if x in new_log_entry_list:
-                            #if any((x in new_log_entry_list for x in v)):
+                            jumps = int(k)
                             # show in logs first
                             logging.info(f'Enemy in {jumps} jumps in <{x}>')
                             # play sound if near systems in the new log
-                            jumps = int(k)
                             text = f'Enemy in {jumps} jumps from the region.'
                             play_alarm(
                                 text, SettingsObject.settings_dic['alarm_volume'])
