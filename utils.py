@@ -48,13 +48,15 @@ def check_new_log_content(new_log_entry, SettingsObject):
         if not any((y in new_log_entry_list for y in consts.EXCEPTION_WORDS)):
             for i in SettingsObject.near_systems['jumps_to_near_systems']:
                 for k, v in i.items():
-                    if any((x in new_log_entry_list for x in v)):
-                        # play sound if near systems in the new log
-                        jumps = int(k)
-                        text = f'Enemy in {jumps} jumps from the region.'
-                        play_alarm(
-                            text, SettingsObject.settings_dic['alarm_volume'])
-                        logging.info(f'Enemy in {jumps} in <{x}>')
+                    for x in v:
+                        if x in v:
+                        #if any((x in new_log_entry_list for x in v)):
+                            # play sound if near systems in the new log
+                            jumps = int(k)
+                            text = f'Enemy in {jumps} jumps from the region.'
+                            play_alarm(
+                                text, SettingsObject.settings_dic['alarm_volume'])
+                            logging.info(f'Enemy in {jumps} in <{x}>')
 
 
 def play_alarm(text, volume):
