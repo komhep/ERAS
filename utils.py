@@ -54,6 +54,7 @@ def check_new_log_content(new_log_entry, SettingsObject):
                         text = f'Enemy in {jumps} jumps from the region.'
                         play_alarm(
                             text, SettingsObject.settings_dic['alarm_volume'])
+                        logging.info(f'Enemy in {jumps} in <{v}>')
 
 
 def play_alarm(text, volume):
@@ -61,4 +62,4 @@ def play_alarm(text, volume):
     engine.setProperty('volume', eval(volume))
     engine.say(text)
     engine.runAndWait()
-    logging.info('Warning played')
+    #logging.info('Warning played')
