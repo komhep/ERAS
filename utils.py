@@ -49,8 +49,8 @@ def check_new_log_content(new_log_entry, SettingsObject):
             for i in SettingsObject.near_systems['jumps_to_near_systems']:
                 for k, v in i.items():
                     for x in v:
-                        if x in v:
-                        #if any((x in new_log_entry_list for x in v)):
+                        if x in new_log_entry_list:
+                            #if any((x in new_log_entry_list for x in v)):
                             # play sound if near systems in the new log
                             jumps = int(k)
                             text = f'Enemy in {jumps} jumps from the region.'
